@@ -29,3 +29,15 @@ if $CALCULATOR 3 @ 2; then  # If the return code of $PROGRAM is zero (i.e. succe
   echo 'ERROR! An invalid run of the application (3 @ 2) apparently succeeded?!'
   exit 1
 fi
+
+# Test subtraction
+if [[ $($CALCULATOR 100 - 90 ) -ne 10 ]]; then  # If the return code of $PROGRAM is zero (i.e. success)...
+  echo 'ERROR! An invalid run of the application (3 @ 2) apparently succeeded?!'
+  exit 1
+fi
+
+# Test division
+if [[ $($CALCULATOR 100 / 10 ) -ne 10 ]]; then  # If the return code of $PROGRAM is zero (i.e. success)...
+  echo 'ERROR! An invalid run of the application (3 @ 2) apparently succeeded?!'
+  exit 1
+fi

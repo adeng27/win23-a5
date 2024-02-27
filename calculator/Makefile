@@ -1,16 +1,4 @@
 
-# objects = main.o addition.o division.o subtraction.o multiplication.o
-
-# calculator: $(objects)
-#     cc -o calculator $(objects)
-
-
-# $(objects): %.o:%.c
-#     cc -c $< -o $@
-
-# clean:
-#     rm -f calculator $(objects)
-
 output: main.o addition.o division.o subtraction.o multiplication.o
 	cc main.o addition.o division.o subtraction.o multiplication.o -o calculator
 
